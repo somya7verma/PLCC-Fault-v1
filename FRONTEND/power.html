@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SHIELD - Power Consumption</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">THE SHIELD</div>
+        <nav class="navigation">
+            <a href="fault_details.html">Fault Table</a>
+            <a href="index.html">Dashboard View</a>
+        </nav>
+    </div>
+    <div class="consumption-content">
+        <h2>Power Consumption Analysis (Last 24 Hours)</h2>
+        <div class="graph-container">
+            <canvas id="powerChart"></canvas>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hours = ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'];
+            const powerData = [15, 12, 10, 25, 40, 55, 65, 70, 60, 85, 75, 45];
+            const ctx = document.getElementById('powerChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: hours,
+                    datasets: [{
+                        label: 'Power Consumption (kW)',
+                        data: powerData,
+                        borderColor: 'rgb(75, 192, 192)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Power (kW)' }
+                        },
+                        x: {
+                            title: { display: true, text: 'Time of Day' }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: true },
+                        title: { display: true, text: 'Power vs. Time Graph' }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
