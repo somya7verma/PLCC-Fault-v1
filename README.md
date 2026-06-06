@@ -6,7 +6,6 @@
 ![Category](https://img.shields.io/badge/Category-Hardware-blue?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/Platform-Arduino%20%7C%20FastAPI%20%7C%20React-purple?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-red?style=for-the-badge)
 
 **Smart India Hackathon 2025 | Hardware Category**
 
@@ -356,7 +355,5 @@ Dashboard available at `http://localhost:5173`
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.  
+## 📄 License  
 © 2025 Team SHIELD | Smart India Hackathon
