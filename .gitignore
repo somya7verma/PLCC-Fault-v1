@@ -1,0 +1,46 @@
+# ── Secrets & OAuth tokens ──────────────────────────────────
+token.json
+token_gmail_v1.pickle
+client_secret*.json
+*.pickle
+credentials.json
+
+# ── Database files ──────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+.env
+.venv
+env/
+venv/
+
+# ── Node / Frontend ─────────────────────────────────────────
+node_modules/
+dist/
+.cache/
+*.log
+
+# ── OS & Editor ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Arduino build artifacts ──────────────────────────────────
+*.elf
+*.hex
+*.bin
+build/

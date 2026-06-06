@@ -1,0 +1,140 @@
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --accent-blue: #3b82f6;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --status-ok: #22c55e;
+    --status-warning: #eab308;
+    --status-fault: #ef4444;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --header-height: 60px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.pin-input {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px 0;
+    letter-spacing: 10px;
+}
+
+.app-header {
+    height: var(--header-height);
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pole-card {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pole-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pole-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.control-btn {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.btn-relay {
+    background: var(--status-ok);
+    color: white;
+}
+
+.btn-relay.off {
+    background: var(--status-fault);
+}
+
+.chat-input {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--bg-secondary);
+    padding: 15px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.chat-input input {
+    flex: 1;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.whatsapp-link {
+    color: #25d366;
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
